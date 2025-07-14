@@ -1,0 +1,159 @@
+/* Clean & Glowing Todo App CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #1d2b64, #f8cdda);
+  color: #fff;
+  margin: 0;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Main Container */
+.todo-container {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Glowing Flickering Title */
+.header {
+  text-align: center;
+  font-size: 2.3rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 30px;
+  color: #fff;
+  animation: flicker 2.5s infinite alternate;
+  text-shadow:
+    0 0 5px #00f7ff,
+    0 0 10px #00f7ff,
+    0 0 20px #00f7ff;
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+  0% { opacity: 1; text-shadow: 0 0 5px #00f7ff; }
+  50% { opacity: 0.9; text-shadow: 0 0 15px #00f7ff; }
+  100% { opacity: 1; text-shadow: 0 0 5px #00f7ff; }
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 65%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+input[type="submit"] {
+  background-color: #00f7ff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #00d0e0;
+}
+
+/* Task List */
+.task-list {
+  margin-top: 20px;
+}
+
+.task-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-card button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.task-card button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+h3 {
+  text-align: center;
+  color: #ffff88;
+  margin-top: 10px;
+}
+
+/* Button Base Style */
+button {
+  background-color: #00f7ff;
+  color: #000;
+  padding: 10px 16px;
+  margin: 5px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 247, 255, 0.4);
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #00d4e0;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 247, 255, 0.6);
+}
+
+/* Special styles for Delete and Edit buttons */
+.task-buttons button {
+  background-color: #ffffff0a;
+  color: #fff;
+  border: 1px solid #00f7ff;
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+/* Hover for Delete and Edit buttons */
+.task-buttons button:hover {
+  background-color: #00f7ff;
+  color: #000;
+  transform: scale(1.03);
+  box-shadow: 0 0 12px #00f7ff;
+}
+
